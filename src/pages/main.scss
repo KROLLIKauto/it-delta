@@ -1,0 +1,43 @@
+.main {
+  max-width: 1350px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  @media (max-width: 500px) {
+    width: 96%;
+    justify-content: center;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    cursor: pointer;
+    @media (max-width: 1000px) {
+      width: 48%;
+      margin-right: 4%;
+    }
+    @media (max-width: 500px) {
+      width: 95%;
+      margin-right: 0;
+    }
+
+    @media (min-width: 1000px) {
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 1000px) {
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    &-img img{
+      border-radius: 8px;
+    }
+  }
+}

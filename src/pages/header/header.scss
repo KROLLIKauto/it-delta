@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+%action-style {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #FFFFFF;
+  width: 119px;
+  height: 38px;
+  cursor: pointer;
+  border: 1px solid #D1D5DB;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+
+%text-action-style {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #374151;
+  width: 61px;
+  height: 20px;
+  text-align: center;
+}
+
+.header {
+  max-width: 1350px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4%;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+
+  &-image {
+    display: flex;
+    width: 100%;
+  }
+
+  &-info {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    z-index: 1;
+    margin-top: -65px;
+    align-items: flex-end;
+    @media (max-width: 1000px) {
+      margin-top: -30px;
+    }
+    @media (max-width: 650px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &-user {
+      display: flex;
+      align-items: flex-end;
+
+      &-avatar {
+        width: 128px;
+        height: 128px;
+        @media (max-width: 1000px) {
+          width: 98px;
+          height: 98px;
+        }
+      }
+
+      &-name {
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 5px;
+        @media (max-width: 1000px) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &-action {
+      display: flex;
+      align-items: flex-end;
+      width: 219px;
+      height: 38px;
+      gap: 16px;
+
+      &-message {
+        @extend %action-style;
+
+        &-text {
+          @extend %text-action-style;
+        }
+      }
+
+      &-call {
+        @extend %action-style;
+        width: 84px;
+        height: 38px;
+        
+
+        &-text {
+          @extend %text-action-style;
+          width: 26px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

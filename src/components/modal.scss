@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+
+.modal.active {
+  transform: scale(1);
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(107, 114, 128, 0.75);
+  transform: scale(0);
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
+    width: 692px;
+    height: 706px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+    @media (max-width: 1000px) {
+      width: 475px;
+    }
+    @media (max-width: 500px) {
+      width: 90%;
+      height: 500px;
+    }
+
+    .modal-img {
+      width: 405px;
+      box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border-radius: 24px;
+      @media (max-width: 500px) {
+        width: 90%;
+      }
+
+      img {
+        border-radius: 24px;
+      }
+    }
+
+    .modal-comment {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      width: 644px;
+      height: 157px;
+      margin-top: 3%;
+      @media (max-width: 1000px) {
+        width: 420px;
+      }
+      @media (max-width: 500px) {
+        width: 90%;
+      }
+
+      &-text {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #374151;
+      }
+
+      .modal-textarea {
+        box-sizing: border-box;
+        width: 644px;
+        height: 105px;
+        background: #FFFFFF;
+        border: 1px solid #D1D5DB;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+        border-radius: 6px;
+        @media (max-width: 1000px) {
+          width: 100%;
+        }
+      }
+
+      &-prompt {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #6B7280;
+      }
+    }
+
+    button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 9px 17px;
+      width: 67px;
+      height: 38px;
+      background: #4F46E5;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+      border-radius: 6px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: #FFFFFF;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
